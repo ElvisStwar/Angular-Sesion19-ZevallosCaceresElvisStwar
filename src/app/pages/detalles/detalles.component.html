@@ -1,0 +1,25 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-8" *ngFor="let pokemon of datosPokemon">
+        <div class="row">
+            <div class="col-10 col-lg-4 border text-center rounded-4">
+                <img class="mt-5" src="{{pokemon.image}}" alt="" width="200px">
+                <hr>
+                <h1 class="mb-4">{{pokemon.name|titlecase}}</h1>
+            </div>
+            <div class="col-10 col-lg">
+                <div class="m-4">
+                    <h2>Detalles:</h2>
+                </div>
+                <hr>
+                <div class="m-4">
+                    <h4>Nombre: <span class="h5">{{pokemon.name|titlecase}}</span></h4>
+                    <h4>Habilidad: <span class="h5">{{pokemon.ability|titlecase}}</span></h4>
+                    <h4>Experiencia base: <span class="h5">{{pokemon.base_exp}}</span></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5 text-center col-5">
+        <button class="btn btn-danger form-control" routerLink="/home">volver</button>
+    </div>
+</div>

@@ -1,1 +1,20 @@
-<p>home works!</p>
+<div class="m-5">
+    <div class="row mb-4 col-6">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <input type="text" class="form-control me-2" name="" id=""[(ngModel)]="num" placeholder="Inserte nombre o número de pokemon">
+                <button class="btn btn-danger" [routerLink]="['/detalles',num]" type="button">Buscar</button>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div *ngFor="let pokemon of data" class="col-8 col-sm border m-2 text-center rounded-4">
+            <h4 class="p-4 mx-auto" style="width: 200px;">{{pokemon.name|titlecase}}</h4>
+            <img class="img-fluid" src="{{pokemon.image}}" alt="" height="100px">
+            <hr>
+            <div class="p-3">
+                <button class="btn btn-success" [routerLink]="['/detalles',pokemon.position]">Detalles</button>
+            </div>
+        </div>
+    </div>
+</div>
