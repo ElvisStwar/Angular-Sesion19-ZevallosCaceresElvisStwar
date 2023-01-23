@@ -18,6 +18,7 @@ export class DetallesComponent implements OnInit{
 
   ngOnInit(): void {
     this.id = String(this.route.snapshot.paramMap.get("id"));
+    this.id = this.id.toLowerCase();
     this.getPokemons();
   }
 
